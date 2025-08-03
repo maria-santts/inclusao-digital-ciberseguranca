@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitando a Cibersegurança: Uma Biblioteca Digital para Iniciantes</title>
+    <!-- Tailwind CSS CDN para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define a fonte Inter para todo o corpo */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Cor de fundo escura e moderna */
+            color: #e2e8f0; /* Cor do texto clara */
+        }
+        /* Estilo para a caixa principal de conteúdo */
+        .main-card {
+            background-color: #1e293b; /* Fundo mais escuro para o cartão */
+            border-radius: 1.5rem; /* rounded-3xl */
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2); /* Sombra mais intensa para destacar */
+            padding: 2.5rem;
+        }
+        /* Estilo para os títulos das seções */
+        .content-section {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #334155;
+        }
+        .content-section:last-of-type {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body class="p-6 md:p-10 lg:p-16">
+
+    <header class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
+            Capacitando a Cibersegurança
+        </h1>
+        <p class="text-lg md:text-xl text-blue-400 font-semibold">
+            Uma Biblioteca Digital para Iniciantes
+        </p>
+        <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+            Seja bem-vindo(a) à sua central de conhecimento sobre como navegar na internet de forma segura. Nossos guias práticos foram feitos para você!
+        </p>
+    </header>
+
+    <main class="container mx-auto px-4 max-w-6xl">
+        <div class="main-card">
+            
+            <!-- Seção: Introdução -->
+            <div class="content-section">
+                <h2 class="text-3xl font-bold text-white mb-4">Bem-vindo(a) à sua central de Cibersegurança!</h2>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    A cibersegurança é o conjunto de práticas e tecnologias para proteger computadores, redes, programas e dados contra acessos não autorizados ou ataques. Em outras palavras, é sobre se proteger no mundo digital. O objetivo desta biblioteca é fornecer as ferramentas e o conhecimento básico para que você possa navegar pela internet de forma segura e consciente, protegendo suas informações pessoais e sua privacidade.
+                </p>
+                <p class="text-gray-300 leading-relaxed">
+                    A inclusão digital não se trata apenas de ter acesso à tecnologia, mas de saber como usá-la de forma segura e eficaz. Um usuário que não entende os riscos online está em desvantagem, podendo se tornar vítima de golpes e fraudes. Esta biblioteca foi criada para ser um guia confiável que empodera você a tomar decisões mais seguras no ambiente digital.
+                </p>
+            </div>
+
+            <!-- Seção: Senhas Fortes -->
+            <div class="content-section">
+                <h2 class="text-3xl font-bold text-white mb-4">Senhas Fortes: A Primeira Linha de Defesa</h2>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Sua senha é a primeira e mais importante defesa contra acessos indesejados. Uma senha fraca é como deixar a porta de casa destrancada. Para garantir sua segurança, é fundamental que suas senhas sejam <strong>únicas</strong>, <strong>complexas</strong> e <strong>difíceis de adivinhar</strong>.
+                </p>
+                <h3 class="text-xl font-semibold text-blue-400 mb-2">Dicas para Criar uma Senha Segura:</h3>
+                <ul class="list-disc list-inside text-gray-300 space-y-2 mb-4">
+                    <li><strong>Use uma combinação de caracteres:</strong> Inclua letras maiúsculas e minúsculas, números e símbolos especiais, como `!`, `@`, `#`, `$`.</li>
+                    <li><strong>Evite informações pessoais:</strong> Nunca use datas de nascimento, nomes de familiares, nomes de animais de estimação ou endereços.</li>
+                    <li><strong>Use frases ou combinações de palavras:</strong> Frases como "EuGostoDeComerPizzaCom345Azeitonas!" são fáceis de lembrar para você, mas extremamente difíceis para os outros e para programas de hackers.</li>
+                    <li><strong>Não repita senhas:</strong> Nunca use a mesma senha para diferentes serviços. Se um site for hackeado, suas outras contas estarão em risco.</li>
+                </ul>
+                <h3 class="text-xl font-semibold text-blue-400 mb-2">Autenticação de Dois Fatores (2FA)</h3>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    A 2FA é uma camada extra de segurança que exige uma segunda forma de verificação (como um código enviado por SMS ou gerado por um aplicativo) além da sua senha. <strong>Ative a 2FA sempre que possível.</strong>
+                </p>
+                <p class="text-gray-300 leading-relaxed">
+                    Considere usar um gerenciador de senhas para armazenar suas senhas de forma segura e evitar a necessidade de memorizar todas elas.
+                </p>
+            </div>
+
+            <!-- Seção: Gerador de Senhas Fortes -->
+            <div class="content-section">
+                <h2 class="text-3xl font-bold text-yellow-500 mb-4">Gerador de Senhas Fortes</h2>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Gerar senhas fortes e aleatórias é a melhor forma de garantir que elas sejam únicas e difíceis de serem quebradas. Use a ferramenta abaixo para criar uma senha segura para seus novos cadastros.
+                </p>
+                <div class="p-6 bg-slate-800 rounded-xl shadow-md mb-6">
+                    <div class="mb-4">
+                        <label for="passwordLength" class="block text-gray-400 text-sm font-bold mb-2">Comprimento da Senha:</label>
+                        <input type="number" id="passwordLength" value="16" min="8" max="64" class="w-full p-3 rounded-md bg-slate-700 text-white border border-slate-600 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                    </div>
+                    <div class="mb-4 flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <input type="checkbox" id="includeUppercase" checked class="h-4 w-4 text-yellow-500 rounded border-gray-600 focus:ring-yellow-500 bg-slate-700">
+                            <label for="includeUppercase" class="ml-2 text-white">Letras Maiúsculas</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="includeLowercase" checked class="h-4 w-4 text-yellow-500 rounded border-gray-600 focus:ring-yellow-500 bg-slate-700">
+                            <label for="includeLowercase" class="ml-2 text-white">Letras Minúsculas</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="includeNumbers" checked class="h-4 w-4 text-yellow-500 rounded border-gray-600 focus:ring-yellow-500 bg-slate-700">
+                            <label for="includeNumbers" class="ml-2 text-white">Números</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="includeSymbols" class="h-4 w-4 text-yellow-500 rounded border-gray-600 focus:ring-yellow-500 bg-slate-700">
+                            <label for="includeSymbols" class="ml-2 text-white">Símbolos</label>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <input type="text" id="generatedPassword" readonly class="flex-grow p-3 rounded-md bg-slate-700 text-white border border-slate-600 focus:outline-none" placeholder="Sua senha gerada aparecerá aqui...">
+                        <button id="generatePasswordButton" class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-md shadow-lg transition duration-300 ease-in-out">
+                            Gerar Senha
+                        </button>
+                        <button id="copyPasswordButton" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-md shadow-lg transition duration-300 ease-in-out">
+                            Copiar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nova Seção: Gerador de Frases Memoráveis -->
+            <div class="content-section">
+                <h2 class="text-3xl font-bold text-pink-500 mb-4">Gerador de Frases Memoráveis</h2>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Para criar senhas fortes e fáceis de lembrar, uma boa estratégia é usar uma frase. Use nossa ferramenta para gerar uma frase aleatória que você pode adaptar para sua senha. Por exemplo: "Um peixe azul saltou sobre a lua!". Você pode transformar isso em <strong>Ump3ixe4zuLSaltou</strong> para uma senha muito forte.
+                </p>
+                <div class="p-6 bg-slate-800 rounded-xl shadow-md mb-6">
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <input type="text" id="generatedPhrase" readonly class="flex-grow p-3 rounded-md bg-slate-700 text-white border border-slate-600 focus:outline-none" placeholder="Sua frase gerada aparecerá aqui...">
+                        <button id="generatePhraseButton" class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-md shadow-lg transition duration-300 ease-in-out">
+                            Gerar Frase
+                        </button>
+                        <button id="copyPhraseButton" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-md shadow-lg transition duration-300 ease-in-out">
+                            Copiar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nova Seção: Gerenciadores de Senhas -->
+            <div class="content-section">
+                <h2 class="text-3xl font-bold text-green-500 mb-4">Gerenciadores de Senhas: A Solução Definitiva</h2>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Gerenciadores de senhas são ferramentas essenciais para a segurança digital. Eles permitem que você crie, armazene e gerencie senhas fortes e únicas para todas as suas contas, sem a necessidade de memorizar cada uma delas. Você só precisa se lembrar de uma única senha mestra.
+                </p>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Recomendamos o uso de gerenciadores de senhas gratuitos e confiáveis, que oferecem uma base sólida de proteção para iniciantes.
+                </p>
+                <h3 class="text-xl font-semibold text-blue-400 mb-2">Opções Recomendadas:</h3>
+                <ul class="list-disc list-inside text-gray-300 space-y-2">
+                    <li><strong>Gerenciador de Senhas do Google:</strong> Integrado à sua conta do Google, é uma opção fácil para quem já usa o Chrome ou dispositivos Android. Ele salva e preenche senhas automaticamente e verifica se elas foram comprometidas.</li>
+                    <li><strong>Bitwarden:</strong> Uma opção de código aberto muito popular, com uma versão gratuita que oferece sincronização ilimitada entre dispositivos e um gerador de senhas seguras. É ideal para quem busca uma solução robusta e multiplataforma.</li>
+                    <li><strong>LastPass:</strong> Outro gerenciador de senhas amplamente conhecido. Sua versão gratuita tem algumas limitações (como o uso em apenas um tipo de dispositivo), mas ainda é uma ferramenta poderosa para gerar e armazenar senhas.</li>
+                </ul>
+            </div>
+            
+            <!-- Seção: Phishing -->
+            <div class="content-section">
+                <h2 class="text-3xl font-bold text-white mb-4">Phishing: Identificando E-mails e Mensagens Falsas</h2>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Phishing é uma fraude online onde criminosos se passam por empresas, bancos ou pessoas confiáveis para roubar suas informações pessoais, como senhas e dados de cartão de crédito. Eles geralmente enviam e-mails ou mensagens com links que levam a páginas falsas, idênticas às originais.
+                </p>
+                <h3 class="text-xl font-semibold text-blue-400 mb-2">Checklist de Alertas de Phishing:</h3>
+                <ul class="list-disc list-inside text-gray-300 space-y-2 mb-4">
+                    <li><strong>Remetente Desconhecido:</strong> O e-mail veio de um endereço estranho ou que não corresponde à empresa?</li>
+                    <li><strong>Senso de Urgência:</strong> A mensagem pede para você agir imediatamente, como "sua conta será bloqueada em 24 horas"?</li>
+                    <li><strong>Erros de Ortografia e Gramática:</strong> E-mails de empresas legítimas raramente contêm erros básicos.</li>
+                    <li><strong>Links Suspeitos:</strong> Ao passar o mouse sobre o link, o endereço que aparece não é o oficial da empresa? <strong>Nunca clique em links suspeitos.</strong></li>
+                    <li><strong>Anexos Inesperados:</strong> A mensagem pede para você baixar um anexo que não estava esperando?</li>
+                </ul>
+                <p class="text-gray-300 leading-relaxed">
+                    Sempre desconfie e, em caso de dúvida, não clique em nada. Acesse o site oficial da empresa diretamente pelo seu navegador, digitando o endereço você mesmo.
+                </p>
+            </div>
+
+            <!-- Seção: Vírus e Malware -->
+            <div class="content-section">
+                <h2 class="text-3xl font-bold text-white mb-4">Vírus e Malware: O Que são e Como se Proteger</h2>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Malware é um termo genérico para "software malicioso", que inclui vírus, cavalos de Troia, spyware e ransomware. Esses programas são criados para danificar seu computador, roubar informações ou assumir o controle do seu sistema.
+                </p>
+                <h3 class="text-xl font-semibold text-blue-400 mb-2">Como Evitar Infecções:</h3>
+                <ul class="list-disc list-inside text-gray-300 space-y-2 mb-4">
+                    <li><strong>Use um bom software antivírus:</strong> Mantenha-o sempre atualizado para que ele possa identificar as ameaças mais recentes.</li>
+                    <li><strong>Mantenha o sistema atualizado:</strong> As atualizações do seu sistema operacional e aplicativos corrigem falhas de segurança que podem ser exploradas por malwares.</li>
+                    <li><strong>Evite downloads de fontes desconhecidas:</strong> Baixe programas e arquivos apenas de sites oficiais e confiáveis.</li>
+                    <li><strong>Seja cauteloso com anexos:</strong> Nunca abra anexos de e-mails desconhecidos ou suspeitos.</li>
+                </ul>
+                <p class="text-gray-300 leading-relaxed">
+                    Se seu computador começar a ficar lento, apresentar pop-ups estranhos ou travar com frequência, pode ser um sinal de infecção. Faça uma verificação completa com seu antivírus.
+                </p>
+            </div>
+
+            <!-- Seção: Privacidade Online -->
+            <div class="content-section">
+                <h2 class="text-3xl font-bold text-white mb-4">Privacidade Online: Protegendo Seus Dados Pessoais</h2>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Sua privacidade online é a sua capacidade de controlar quem vê suas informações pessoais e como elas são usadas. É fundamental entender que tudo o que você posta na internet pode se tornar público, mesmo que você acredite estar em um ambiente privado.
+                </p>
+                <h3 class="text-xl font-semibold text-blue-400 mb-2">Dicas para Proteger Sua Privacidade:</h3>
+                <ul class="list-disc list-inside text-gray-300 space-y-2 mb-4">
+                    <li><strong>Ajuste as configurações de privacidade:</strong> Em redes sociais e outros aplicativos, verifique e restrinja quem pode ver suas postagens e informações de perfil.</li>
+                    <li><strong>Pense antes de postar:</strong> Reflita se você se sentiria confortável se suas postagens e fotos fossem vistas por qualquer pessoa.</li>
+                    <li><strong>Limpe seu histórico e cookies:</strong> Limpar regularmente os dados de navegação ajuda a proteger suas informações e evita que sites te rastreiem.</li>
+                    <li><strong>Use o modo de navegação anônima:</strong> Quando usar computadores públicos ou de terceiros, use o modo anônimo para evitar que seu histórico seja salvo.</li>
+                </ul>
+                <p class="text-gray-300 leading-relaxed">
+                    A proteção da sua privacidade começa com as suas escolhas e atitudes. Ao estar ciente dos riscos e tomar precauções, você mantém o controle sobre a sua vida digital.
+                </p>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer class="text-center text-gray-500 mt-16 text-sm">
+        <p>&copy; 2025 Projeto Atividade Extensionista II</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Lógica para o Gerador de Senhas Fortes
+            const passwordLengthInput = document.getElementById('passwordLength');
+            const includeUppercaseCheckbox = document.getElementById('includeUppercase');
+            const includeLowercaseCheckbox = document.getElementById('includeLowercase');
+            const includeNumbersCheckbox = document.getElementById('includeNumbers');
+            const includeSymbolsCheckbox = document.getElementById('includeSymbols');
+            const generatedPasswordInput = document.getElementById('generatedPassword');
+            const generatePasswordButton = document.getElementById('generatePasswordButton');
+            const copyPasswordButton = document.getElementById('copyPasswordButton');
+
+            const generatePassword = () => {
+                const length = parseInt(passwordLengthInput.value);
+                const includeUppercase = includeUppercaseCheckbox.checked;
+                const includeLowercase = includeLowercaseCheckbox.checked;
+                const includeNumbers = includeNumbersCheckbox.checked;
+                const includeSymbols = includeSymbolsCheckbox.checked;
+
+                const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
+                const numberChars = '0123456789';
+                const symbolChars = '!@#$%^&*()_+~`|}{[]:;?><,./-=';
+
+                let validChars = '';
+                if (includeUppercase) validChars += uppercaseChars;
+                if (includeLowercase) validChars += lowercaseChars;
+                if (includeNumbers) validChars += numberChars;
+                if (includeSymbols) validChars += symbolChars;
+
+                if (validChars === '') {
+                    generatedPasswordInput.value = 'Selecione pelo menos um tipo de caractere.';
+                    return;
+                }
+
+                let password = '';
+                for (let i = 0; i < length; i++) {
+                    const randomIndex = Math.floor(Math.random() * validChars.length);
+                    password += validChars[randomIndex];
+                }
+
+                generatedPasswordInput.value = password;
+            };
+
+            generatePasswordButton.addEventListener('click', generatePassword);
+
+            copyPasswordButton.addEventListener('click', () => {
+                if (generatedPasswordInput.value) {
+                    try {
+                        const tempInput = document.createElement('textarea');
+                        tempInput.value = generatedPasswordInput.value;
+                        document.body.appendChild(tempInput);
+                        tempInput.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(tempInput);
+                        // Feedback visual para o usuário
+                        const originalText = copyPasswordButton.textContent;
+                        copyPasswordButton.textContent = 'Copiado!';
+                        setTimeout(() => {
+                            copyPasswordButton.textContent = originalText;
+                        }, 2000);
+                    } catch (err) {
+                        console.error('Falha ao copiar:', err);
+                    }
+                }
+            });
+
+            // Lógica para o Gerador de Frases Memoráveis
+            const generatedPhraseInput = document.getElementById('generatedPhrase');
+            const generatePhraseButton = document.getElementById('generatePhraseButton');
+            const copyPhraseButton = document.getElementById('copyPhraseButton');
+
+            const adjectives = [
+                "Verde", "Grande", "Rápido", "Azul", "Feliz", "Brilhante", "Curioso", "Veloz", "Antigo", "Moderno", 
+                "Silencioso", "Barulhento", "Macio", "Forte", "Frágil", "Longo", "Curto", "Profundo", "Amplo", "Estreito",
+                "Quente", "Frio", "Suave", "Áspero", "Sólido", "Líquido", "Firme", "Mole", "Pesado", "Leve",
+                "Doce", "Azedo", "Salgado", "Amargo", "Picante", "Fresco", "Murcho", "Cheiroso", "Fedido", "Branco",
+                "Preto", "Vermelho", "Amarelo", "Rosa", "Roxo", "Cinza", "Dourado", "Prateado", "Claro", "Escuro"
+            ];
+            const verbs = [
+                "Voou", "Saltou", "Correu", "Cantou", "Dançou", "Pulou", "Caiu", "Gritou", "Sussurrou", "Descobriu", 
+                "Criou", "Escreveu", "Leu", "Desenhou", "Pintou", "Construiu", "Quebrou", "Consertou", "Cozinhou", "Comeu",
+                "Bebeu", "Dormiu", "Acordou", "Estudou", "Aprendeu", "Ensinou", "Viajou", "Explorou", "Subiu", "Desceu",
+                "Flutuou", "Navegou", "Dirigiu", "Pedalou", "Nadou", "Caminhou", "Plantou", "Colheu", "Comprou", "Vendeu",
+                "Abriu", "Fechou", "Escondeu", "Encontrou", "Perdeu", "Ganhou", "Sonhou", "Lutou", "Venceu", "Perdeu"
+            ];
+            const nouns = [
+                "Gato", "Cachorro", "Livro", "Computador", "Teclado", "Céu", "Flor", "Estrela", "Oceano", "Montanha", 
+                "Robô", "Carro", "Avião", "Barco", "Trem", "Casa", "Apartamento", "Cidade", "País", "Planeta",
+                "Árvore", "Folha", "Pássaro", "Peixe", "Leão", "Tigre", "Elefante", "Dinossauro", "Dragão", "Princesa",
+                "Príncipe", "Rei", "Rainha", "Bruxa", "Mago", "Fada", "Anjo", "Demônio", "Lobo", "Ovelha",
+                "Lápis", "Caneta", "Papel", "Telefone", "Internet", "Software", "Hardware", "Dados", "Cérebro", "Coração"
+            ];
+            
+            const generatePhrase = () => {
+                const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+                const randomVerb = verbs[Math.floor(Math.random() * verbs.length)];
+                const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+                
+                // Converte a primeira letra de cada palavra para maiúscula e remove os espaços
+                const phrase = `${randomAdjective}${randomVerb}${randomNoun}`;
+                
+                generatedPhraseInput.value = phrase;
+            };
+
+            generatePhraseButton.addEventListener('click', generatePhrase);
+            
+            copyPhraseButton.addEventListener('click', () => {
+                if (generatedPhraseInput.value) {
+                    try {
+                        const tempInput = document.createElement('textarea');
+                        tempInput.value = generatedPhraseInput.value;
+                        document.body.appendChild(tempInput);
+                        tempInput.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(tempInput);
+                        // Feedback visual para o usuário
+                        const originalText = copyPhraseButton.textContent;
+                        copyPhraseButton.textContent = 'Copiado!';
+                        setTimeout(() => {
+                            copyPhraseButton.textContent = originalText;
+                        }, 2000);
+                    } catch (err) {
+                        console.error('Falha ao copiar:', err);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
